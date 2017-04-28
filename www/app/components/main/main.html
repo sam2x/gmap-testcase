@@ -1,0 +1,46 @@
+<md-toolbar>
+  <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+    <p>{{ main.title }}</p>
+  </div>
+</md-toolbar>
+<div layout="column" layout-align="center center" flex>
+  <md-whiteframe class="md-whiteframe-3dp" layout="column" style="margin: 1em; width: 22em; height: 15em;" flex>
+    <div layout="row" layout-align="space-around center" flex="100">
+      <div aria-label="value" layout-align="center center" layout="row" flex="50">
+        <b>Device Ready</b>
+      </div>
+      <div aria-label="value" layout-align="center center" layout="row" flex="50">
+        {{isReady ? 'YES': 'NO'}}
+      </div>
+    </div>
+    <div layout="row" layout-align="space-around center" flex="100">
+      <div aria-label="value" layout-align="center center" layout="row" flex="50"
+           style="text-align:center;">
+        <b>Memory Available Capacity</b>
+      </div>
+      <div aria-label="value" layout-align="center center" layout="row" flex="50"
+        style="font-weight: 900;font-size: 2em;">
+        {{$root.mem.availableCapacity}} Mo
+      </div>
+    </div>
+    <div layout="row" layout-align="space-around center" flex="100">
+      <div aria-label="key" layout-align="center center" layout="row" flex="50"
+           style="text-align:center;">
+        <b>Total Physical Memory</b>
+      </div>
+      <div aria-label="value" layout-align="center center" layout="row" flex="50">
+        {{$root.mem.capacity}} Mo
+      </div>
+    </div>
+    <md-divider></md-divider>
+    <div layout="row" layout-align="space-around center" flex="100"
+         ng-repeat="(k, v) in $root.deviceInformation">
+      <div aria-label="key" layout-align="center center" layout="row" flex="50">
+        <b>{{k}}</b>
+      </div>
+      <div aria-label="value" layout-align="center center" layout="row" flex="50">
+        {{v}}
+      </div>
+    </div>
+  </md-whiteframe>
+</div>
