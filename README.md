@@ -19,4 +19,4 @@ Cordova-plugin-googlemaps
 - cordova-plugin-googlemaps
 
 ### Issue :
-![MemoryLeak when adding custom Marker](https://github.com/mapsplugin/cordova-plugin-googlemaps/issues/1421)
+[MemoryLeak when adding custom Marker](https://github.com/mapsplugin/cordova-plugin-googlemaps/issues/1421)
